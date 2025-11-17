@@ -1,16 +1,16 @@
 <?php
-// Web PHP paling sederhana
+declare(strict_types=1); // PHP 8.4 recommended
+
 $name = "Dhia Adzkia";
 ?>
-
 <!DOCTYPE html>
-<html>
+<html lang="id">
 <head>
     <meta charset="UTF-8">
-    <title>Halo dari PHP</title>
+    <title>Halo dari PHP 8.4</title>
     <style>
         body {
-            font-family: Arial;
+            font-family: Arial, sans-serif;
             background: #f5f5f5;
             display: flex;
             justify-content: center;
@@ -19,20 +19,21 @@ $name = "Dhia Adzkia";
             margin: 0;
         }
         .box {
-            background: white;
+            background: #ffffff;
             padding: 25px;
-            border-radius: 12px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            border-radius: 14px;
+            box-shadow: 0 4px 18px rgba(0, 0, 0, 0.12);
             text-align: center;
         }
-        h1 { margin-bottom: 10px; }
+        h1 { margin-bottom: 12px; }
+        p { font-size: 16px; }
     </style>
 </head>
 <body>
     <div class="box">
         <h1>Halo! 👋</h1>
-        <p>Ini web PHP sederhana buatan <b><?php echo $name; ?></b></p>
-        <p>Salam kenal!</p>
+        <p>Ini web PHP sederhana buatan <b><?= htmlspecialchars($name) ?></b></p>
+        <p>Salam kenal dari PHP 8.4!</p>
     </div>
 </body>
 </html>
